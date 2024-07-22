@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,4 +25,12 @@ public class HistoricoEmprestimo {
     @JoinColumn(name = "emprestimo_id")
     private Emprestimo emprestimo;
 
+    public static List<HistoricoEmprestimo> findAll() {
+        return List.of();
+    }
+
+    public HistoricoEmprestimo save(HistoricoEmprestimo historicoEmprestimo) {
+        return historicoEmprestimo;
+    }
 }
+

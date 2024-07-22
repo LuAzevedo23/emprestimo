@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -23,4 +24,8 @@ public class Garantia {
     @ManyToOne
     @JoinColumn(name = "emprestimo_id")
     private Emprestimo emprestimo;
+
+    public List<Garantia> findAll() {
+        return List.of();
+    }
 }
